@@ -1,3 +1,5 @@
+import './styles.css';
+
 // Config & Frame settings
 const TOTAL_FRAMES = 240;
 const FRAME_FOLDER = `${import.meta.env.BASE_URL}ezgif-52a536baca025bf6-jpg`;
