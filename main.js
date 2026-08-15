@@ -1,6 +1,6 @@
 // Config & Frame settings
 const TOTAL_FRAMES = 240;
-const FRAME_FOLDER = '/ezgif-52a536baca025bf6-jpg';
+const FRAME_FOLDER = `${import.meta.env.BASE_URL}ezgif-52a536baca025bf6-jpg`;
 const LERP_EASE = 0.15; // Controls scroll inertia smoothness
 
 // Elements
@@ -86,7 +86,7 @@ function updateScrollTarget() {
   );
   const maxScroll = Math.max(1, scrollHeight - window.innerHeight);
   const scrollTop = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
-  
+
   const scrollProgress = Math.max(0, Math.min(1, scrollTop / maxScroll));
   targetFrame = scrollProgress * (TOTAL_FRAMES - 1);
 }
@@ -94,7 +94,7 @@ function updateScrollTarget() {
 // RAF Lerp Animation Loop for ultra-smooth scrolling
 function animate() {
   const diff = targetFrame - currentFrame;
-  
+
   if (Math.abs(diff) > 0.001) {
     currentFrame += diff * LERP_EASE;
   } else {
