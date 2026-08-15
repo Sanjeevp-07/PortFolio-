@@ -156,6 +156,59 @@ function handleKeyDown(e) {
   }
 }
 
+// Contact Form Handler with FormSubmit AJAX Endpoint
+function setupContactForm() {
+  const form = document.getElementById('contact-form');
+  const statusMsg = document.getElementById('contact-status');
+  const submitBtn = document.getElementById('contact-btn');
+
+  if (!form) return;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    if (!submitBtn || !statusMsg) return;
+
+    const originalBtnText = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    statusMsg.style.display = 'block';
+    statusMsg.style.color = 'rgba(255, 255, 255, 0.7)';
+    statusMsg.textContent = 'Sending message...';
+
+    const formData = new FormData(form);
+    formData.append('_captcha', 'false');
+    formData.append('_subject', `New Portfolio Message from ${formData.get('email')}`);
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/sanjeev1803t@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: formData
+      });
+
+      if (response.ok) {
+        statusMsg.style.color = '#4EFEAE';
+        statusMsg.textContent = '✓ Message sent! Check your inbox.';
+        form.reset();
+      } else {
+        statusMsg.style.color = '#FF3B30';
+        statusMsg.textContent = '✕ Failed to send message. Please try again.';
+      }
+    } catch (error) {
+      console.error('Contact form submit error:', error);
+      statusMsg.style.color = '#FF3B30';
+      statusMsg.textContent = '✕ Connection error. Please try again later.';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalBtnText;
+    }
+  });
+}
+
 // Initialize
 function init() {
   window.addEventListener('resize', resizeCanvas);
@@ -167,6 +220,7 @@ function init() {
   resizeCanvas();
   updateScrollTarget();
   preloadFrames();
+  setupContactForm();
   requestAnimationFrame(animate);
 }
 
