@@ -209,6 +209,39 @@ function setupContactForm() {
   });
 }
 
+// Clean URL Navigation Handler (Removes # hashes from browser URL bar)
+function setupCleanNavigation() {
+  // 1. Clean initial hash if present on load
+  if (window.location.hash) {
+    history.replaceState(null, '', window.location.pathname + window.location.search);
+  }
+
+  // 2. Intercept click events on all internal anchor links
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetHash = anchor.getAttribute('href');
+
+      if (targetHash === '#' || targetHash === '#home') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        const targetElement = document.querySelector(targetHash);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+
+      // Keep URL clean in address bar without #
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+    });
+  });
+
+  // 3. Keep URL clean on hash change events
+  window.addEventListener('hashchange', () => {
+    history.replaceState(null, '', window.location.pathname + window.location.search);
+  });
+}
+
 // Initialize
 function init() {
   window.addEventListener('resize', resizeCanvas);
@@ -221,6 +254,7 @@ function init() {
   updateScrollTarget();
   preloadFrames();
   setupContactForm();
+  setupCleanNavigation();
   requestAnimationFrame(animate);
 }
 
