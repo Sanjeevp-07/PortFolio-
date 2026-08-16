@@ -37,16 +37,19 @@
     <!-- Navbar -->
     <header class="navbar">
       <div class="nav-container">
-        <a href="#" class="logo">Sanjeev</a>
+        <a href="#" class="logo" title="Sanjeev Kumar">
+          <span class="logo-orb"></span>
+          <span class="logo-text">Sanjeev</span>
+        </a>
         <nav class="nav-links">
           <a href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
-          <a href="#methodology">Methodology</a>
+          <a href="#research">Research</a>
           <a href="#skills">Skills</a>
           <a href="#experience">Experience</a>
         </nav>
-        <a href="#contact" class="btn-primary">
+        <a href="#contact" class="btn-primary nav-cta-btn">
           Get in touch
           <span class="arrow-icon">→</span>
         </a>
@@ -63,13 +66,16 @@
           </div>
           <div class="hero-right">
             <h2 class="hero-right-title">
-              I'm <strong>Sanjeev Kumar</strong>, a Computer Science engineer focused on building scalable web applications, intelligent ML systems, and practical software products.
+              I'm <strong>Sanjeev Kumar</strong>, a Computer Science engineer focused on building scalable web
+              applications, intelligent ML systems, and practical software products.
             </h2>
             <p class="hero-right-desc">
-              I work across <strong>frontend, backend, databases, APIs, and machine learning</strong> — turning ideas into working, measurable systems.
+              I work across <strong>frontend, backend, databases, APIs, and machine learning</strong> — turning ideas
+              into working, measurable systems.
             </p>
             <p class="hero-right-desc">
-              From full-stack applications and AI-powered tools to experimental EEG/BCI systems, I enjoy taking complex problems from <strong>idea &rarr; implementation &rarr; validation</strong>.
+              From full-stack applications and AI-powered tools to experimental EEG/BCI systems, I enjoy taking complex
+              problems from <strong>idea &rarr; implementation &rarr; validation</strong>.
             </p>
             <div class="hero-cta-group">
               <a href="#projects" class="btn-primary btn-orange">
@@ -333,7 +339,7 @@
             <div class="project-v-card-body">
               <div class="project-v-info">
                 <h3 class="project-v-title">INORA — Multi-Channel EEG-Based Control</h3>
-                
+
                 <div class="project-v-meta">
                   <div class="meta-row">
                     <span class="meta-label">TIMELINE</span>
@@ -346,27 +352,34 @@
                 </div>
 
                 <ul class="project-bullet-list">
-                  <li>Built a low-cost 3-channel EEG acquisition system with wireless streaming at 83 Hz/channel, and developed a Python pipeline for EEG acquisition, filtering, and DRL-based noise reduction, validated on 20 volunteers.</li>
-                  <li>Demonstrated EEG-based Pong control with valid 15–80 µV signals using hardware costing INR 3,146.</li>
+                  <li>Built a low-cost 3-channel EEG acquisition system with wireless streaming at 83 Hz/channel, and
+                    developed a Python pipeline for EEG acquisition, filtering, and DRL-based noise reduction, validated
+                    on 20 volunteers.</li>
+                  <li>Demonstrated EEG-based Pong control with valid 15–80 µV signals using hardware costing INR 3,146.
+                  </li>
                 </ul>
 
                 <div class="project-v-divider"></div>
 
                 <div class="project-v-actions">
-                  <button class="btn-action btn-blue view-details-btn" onclick="toggleProject('project-1')">View Details <span class="arrow-icon">↓</span></button>
+                  <button class="btn-action btn-blue view-details-btn" onclick="toggleProject('project-1')">View Details
+                    <span class="arrow-icon">↓</span></button>
+                  <a href="https://inora-2-0.vercel.app/" target="_blank" rel="noopener"
+                    class="btn-action live-link-btn">
+                    Live Demo
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
                 </div>
               </div>
 
-              <!-- Right 30% Cover Image Placeholder -->
-              <div class="project-cover-placeholder">
-                <div class="placeholder-content">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <rect x="3" y="3" width="18" height="18" rx="3"></rect>
-                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                    <polyline points="21 15 16 10 5 21"></polyline>
-                  </svg>
-                  <span>Project Cover Image</span>
-                </div>
+              <!-- Right 30% Cover Image -->
+              <div class="project-cover-container" onclick="openImageLightbox('/inora-cover.png', 'INORA — Multi-Channel EEG-Based Control')" title="Click to expand preview">
+                <img src="/inora-cover.png" alt="INORA — Multi-Channel EEG-Based Control Cover"
+                  class="project-cover-img" />
               </div>
             </div>
 
@@ -376,9 +389,12 @@
                 <div class="project-extended-desc">
                   <h4>HARDWARE & SIGNAL PROCESSING HIGHLIGHTS</h4>
                   <ul class="project-bullet-list">
-                    <li>Custom hardware stack incorporating AD620 instrumentation amplifier, TL072 active filtering stage, ADS1115 16-bit ADC, and ESP32 wireless telemetry.</li>
-                    <li>Python acquisition pipeline featuring real-time FFT feature extraction, bandpass filtering, and Deep Reinforcement Learning (DRL) noise reduction.</li>
-                    <li>Clinical & performance validation on 20 test subjects, maintaining reliable signal fidelity (15–80 µV) for real-time Pong gameplay control.</li>
+                    <li>Custom hardware stack incorporating AD620 instrumentation amplifier, TL072 active filtering
+                      stage, ADS1115 16-bit ADC, and ESP32 wireless telemetry.</li>
+                    <li>Python acquisition pipeline featuring real-time FFT feature extraction, bandpass filtering, and
+                      Deep Reinforcement Learning (DRL) noise reduction.</li>
+                    <li>Clinical & performance validation on 20 test subjects, maintaining reliable signal fidelity
+                      (15–80 µV) for real-time Pong gameplay control.</li>
                   </ul>
                 </div>
               </div>
@@ -390,7 +406,7 @@
             <div class="project-v-card-body">
               <div class="project-v-info">
                 <h3 class="project-v-title">BrainScore — EEG-Based Depression Detection</h3>
-                
+
                 <div class="project-v-meta">
                   <div class="meta-row">
                     <span class="meta-label">TIMELINE</span>
@@ -403,14 +419,17 @@
                 </div>
 
                 <ul class="project-bullet-list">
-                  <li>Processed EEG recordings from 58 subjects using 20-channel signals and extracted 18 statistical, frequency, and entropy-based biomarkers; built and evaluated 6 machine learning models.</li>
-                  <li>Achieved 95.28% classification accuracy using LightGBM, with SHAP analysis to interpret feature importance and improve model explainability for automated depression detection.</li>
+                  <li>Processed EEG recordings from 58 subjects using 20-channel signals and extracted 18 statistical,
+                    frequency, and entropy-based biomarkers; built and evaluated 6 machine learning models.</li>
+                  <li>Achieved 95.28% classification accuracy using LightGBM, with SHAP analysis to interpret feature
+                    importance and improve model explainability for automated depression detection.</li>
                 </ul>
 
                 <div class="project-v-divider"></div>
 
                 <div class="project-v-actions">
-                  <button class="btn-action btn-blue view-details-btn" onclick="toggleProject('project-2')">View Details <span class="arrow-icon">↓</span></button>
+                  <button class="btn-action btn-blue view-details-btn" onclick="toggleProject('project-2')">View Details
+                    <span class="arrow-icon">↓</span></button>
                 </div>
               </div>
 
@@ -433,9 +452,12 @@
                 <div class="project-extended-desc">
                   <h4>MODEL ARCHITECTURE & EXPLAINABILITY</h4>
                   <ul class="project-bullet-list">
-                    <li>Engineered multi-channel signal processing pipeline across 20 EEG channels, extracting 18 high-impact statistical, time-domain, frequency-domain, and entropy-based biomarkers.</li>
-                    <li>Benchmarked 6 Machine Learning algorithms (including LightGBM, Random Forest, XGBoost, and SVM) on 58 subject datasets.</li>
-                    <li>Leveraged SHAP (SHapley Additive exPlanations) for quantitative feature attribution, establishing clinical interpretability for automated depression diagnostics.</li>
+                    <li>Engineered multi-channel signal processing pipeline across 20 EEG channels, extracting 18
+                      high-impact statistical, time-domain, frequency-domain, and entropy-based biomarkers.</li>
+                    <li>Benchmarked 6 Machine Learning algorithms (including LightGBM, Random Forest, XGBoost, and SVM)
+                      on 58 subject datasets.</li>
+                    <li>Leveraged SHAP (SHapley Additive exPlanations) for quantitative feature attribution,
+                      establishing clinical interpretability for automated depression diagnostics.</li>
                   </ul>
                 </div>
               </div>
@@ -447,7 +469,7 @@
             <div class="project-v-card-body">
               <div class="project-v-info">
                 <h3 class="project-v-title">MUNC Dashboard — Kasper Infotech User Dashboard</h3>
-                
+
                 <div class="project-v-meta">
                   <div class="meta-row">
                     <span class="meta-label">TIMELINE</span>
@@ -460,27 +482,32 @@
                 </div>
 
                 <ul class="project-bullet-list">
-                  <li>Developed and enhanced responsive dashboard pages using JavaScript, Next.js, and React.js, implementing frontend features and improving UI usability across multiple pages.</li>
-                  <li>Resolved application bugs and supported testing and documentation to improve reliability and maintainability.</li>
+                  <li>Developed and enhanced responsive dashboard pages using JavaScript, Next.js, and React.js,
+                    implementing frontend features and improving UI usability across multiple pages.</li>
+                  <li>Resolved application bugs and supported testing and documentation to improve reliability and
+                    maintainability.</li>
                 </ul>
 
                 <div class="project-v-divider"></div>
 
                 <div class="project-v-actions">
-                  <button class="btn-action btn-blue view-details-btn" onclick="toggleProject('project-3')">View Details <span class="arrow-icon">↓</span></button>
+                  <button class="btn-action btn-blue view-details-btn" onclick="toggleProject('project-3')">View Details
+                    <span class="arrow-icon">↓</span></button>
+                  <a href="https://munc-kasper.vercel.app/" target="_blank" rel="noopener"
+                    class="btn-action live-link-btn">
+                    Live Demo
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
                 </div>
               </div>
 
-              <!-- Right 30% Cover Image Placeholder -->
-              <div class="project-cover-placeholder">
-                <div class="placeholder-content">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <rect x="3" y="3" width="18" height="18" rx="3"></rect>
-                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                    <polyline points="21 15 16 10 5 21"></polyline>
-                  </svg>
-                  <span>Project Cover Image</span>
-                </div>
+              <!-- Right 30% Cover Image -->
+              <div class="project-cover-container" onclick="openImageLightbox('/munc-cover.png', 'MUNC Dashboard — Kasper Infotech User Dashboard')" title="Click to expand preview">
+                <img src="/munc-cover.png" alt="MUNC Dashboard Cover" class="project-cover-img" />
               </div>
             </div>
 
@@ -490,9 +517,12 @@
                 <div class="project-extended-desc">
                   <h4>FRONTEND ARCHITECTURE & USABILITY ENHANCEMENTS</h4>
                   <ul class="project-bullet-list">
-                    <li>Architected modular React/Next.js dashboard components for optimal render speed, responsive navigation, and intuitive user workflows.</li>
-                    <li>Streamlined UI usability across multi-page user account systems with responsive layouts and component state management.</li>
-                    <li>Conducted comprehensive frontend debugging, cross-browser compatibility testing, and technical documentation to ensure long-term code maintainability.</li>
+                    <li>Architected modular React/Next.js dashboard components for optimal render speed, responsive
+                      navigation, and intuitive user workflows.</li>
+                    <li>Streamlined UI usability across multi-page user account systems with responsive layouts and
+                      component state management.</li>
+                    <li>Conducted comprehensive frontend debugging, cross-browser compatibility testing, and technical
+                      documentation to ensure long-term code maintainability.</li>
                   </ul>
                 </div>
               </div>
@@ -502,94 +532,150 @@
       </div>
     </section>
 
-    <!-- SECTION: ENGINEERING METHODOLOGY -->
-    <section id="methodology" class="workflow-section">
+    <!-- SECTION: RESEARCH & PUBLICATIONS -->
+    <section id="research" class="research-publications-section">
       <div class="container">
-        <!-- Section Header Badge -->
-        <div class="pill-badge">
-          <span class="pill-dot blue-dot"></span>
-          <span>ENGINEERING METHODOLOGY</span>
-        </div>
-
-        <!-- Workflow Grid Header -->
-        <div class="workflow-header-grid">
-          <div class="workflow-title-col">
-            <h2 class="workflow-main-title">
-              From <em>problem statement</em> to a working intelligent system.
-            </h2>
+        <!-- Section Header -->
+        <div class="research-header">
+          <div class="pill-badge">
+            <span class="pill-dot red-dot"></span>
+            <span>RESEARCH & PUBLICATIONS</span>
           </div>
-          <div class="workflow-desc-col">
-            <p class="workflow-desc">
-              I approach technical problems by breaking them into measurable stages — understanding the problem,
-              researching existing approaches, building prototypes, validating with real data, and iterating based on
-              results.
-            </p>
-          </div>
-        </div>
-
-        <!-- Interactive Timeline Flow Diagram -->
-        <div class="timeline-container">
-          <div class="timeline-grid-lines">
-            <div class="grid-line"></div>
-            <div class="grid-line"></div>
-            <div class="grid-line"></div>
-            <div class="grid-line"></div>
-          </div>
-
-          <div class="timeline-steps-flow">
-            <!-- Step 1 -->
-            <div class="flow-step step-pos-1">
-              <div class="flow-pill">
-                <span class="flow-icon">🔍</span>
-                <span class="flow-text">01 — Understand: Constraints & Objectives</span>
-
-              </div>
-            </div>
-
-            <!-- Step 2 -->
-            <div class="flow-step step-pos-2">
-              <div class="flow-pill">
-                <span class="flow-icon">🎯</span>
-                <span class="flow-text">02 — Research: Literature & Tech Stacks</span>
-
-              </div>
-            </div>
-
-            <!-- Step 3 -->
-            <div class="flow-step step-pos-3">
-              <div class="flow-pill">
-                <span class="flow-icon">📊</span>
-                <span class="flow-text">03 — Build: Software, AI & Prototypes</span>
-
-              </div>
-            </div>
-
-            <!-- Step 4 -->
-            <div class="flow-step step-pos-4">
-              <div class="flow-pill">
-                <span class="flow-icon">🎨</span>
-                <span class="flow-text">04 — Validate: Testing & Real-World Data</span>
-
-              </div>
-            </div>
-
-            <!-- Step 5 -->
-            <div class="flow-step step-pos-5">
-              <div class="flow-pill">
-                <span class="flow-icon">⚡</span>
-                <span class="flow-text">05 — Iterate: Improve & Refine</span>
-                <span class="duration-badge">Continuous</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Bottom Footer Note -->
-        <div class="workflow-footer-note">
-          <span class="pill-dot blue-dot"></span>
-          <p>
-            A structured workflow for turning research ideas into tested software and hardware prototypes.
+          <h2 class="research-main-title">
+            Accepted IEEE <span class="highlight-red">Research Papers</span>
+          </h2>
+          <p class="research-subtitle">
+            Peer-reviewed research across EEG bio-signal processing, low-cost BCI hardware, and Explainable AI.
           </p>
+        </div>
+
+        <!-- Research Publications Grid -->
+        <div class="publications-grid">
+          <!-- Publication 1: IEEE T-MRB -->
+          <div class="publication-card" id="research-1">
+            <div class="pub-card-main">
+              <div class="pub-card-header">
+                <div class="pub-status-badge badge-orange">
+                  <span class="status-dot"></span>
+                  <span>Accepted at IEEE T-MRB (Pending Publication)</span>
+                </div>
+                <span class="pub-type-tag">Journal Paper</span>
+              </div>
+
+              <h3 class="pub-title">
+                SHAP-based Study: XAI-Guided Optimisation of Spatial-Temporal Bio-Neuro Marker EEG for Depression
+              </h3>
+
+              <div class="pub-venue">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+                <span>IEEE Transactions on Medical Robotics and Bionics (T-MRB)</span>
+              </div>
+
+              <p class="pub-abstract">
+                Extracted 18 spatial-temporal and spectral entropy biomarkers across 20-channel clinical EEG recordings
+                from 58 subjects, achieving 95.28% diagnostic accuracy using LightGBM and SHAP explainability.
+              </p>
+
+              <div class="pub-tags-row">
+                <span class="pub-tag">Python</span>
+                <span class="pub-tag">LightGBM</span>
+                <span class="pub-tag">SHAP</span>
+                <span class="pub-tag">Scikit-learn</span>
+                <span class="pub-tag">Pandas</span>
+                <span class="pub-tag tag-highlight">Bio-Signal Processing</span>
+              </div>
+
+              <div class="pub-card-actions">
+                <button class="btn-action btn-blue view-details-btn" onclick="toggleProject('research-1')">View Details
+                  <span class="arrow-icon">↓</span></button>
+              </div>
+            </div>
+
+            <!-- Expandable Research Highlights -->
+            <div class="project-expanded-content">
+              <div class="project-expanded-inner">
+                <div class="pub-highlights-block" style="margin-bottom: 0;">
+                  <div class="highlights-heading">Research Highlights & Findings:</div>
+                  <ul class="pub-highlights-list">
+                    <li>Extracted 18 statistical, frequency, and entropy biomarkers from 20-channel EEG signals across
+                      58 subjects.</li>
+                    <li>Applied SHAP (SHapley Additive exPlanations) to interpret feature importance and clinical
+                      diagnostic relevance.</li>
+                    <li>Achieved 95.28% classification accuracy using LightGBM with patient-wise cross-validation to
+                      prevent data leakage.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Publication 2: IEEE ETNCC 2026 -->
+          <div class="publication-card" id="research-2">
+            <div class="pub-card-main">
+              <div class="pub-card-header">
+                <div class="pub-status-badge badge-blue">
+                  <span class="status-dot"></span>
+                  <span>Research Paper Accepted at IEEE ETNCC 2026</span>
+                </div>
+                <span class="pub-type-tag">Conference Paper</span>
+              </div>
+
+              <h3 class="pub-title">
+                INORA: A Low-Cost 3-Channel EEG Acquisition System with Driven-Right-Leg Noise Suppression for BCI
+                Prototyping
+              </h3>
+
+              <div class="pub-venue">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+                <span>IEEE Sponsored 2026 International Conference on Emerging Trends in Networks and Computer
+                  Communications (ETNCC 2026)</span>
+              </div>
+
+              <p class="pub-abstract">
+                Prototyped an ultra-low-cost 3-channel EEG hardware system using AD620 differential amplification, TL072
+                active DRL noise cancellation, and ESP32 wireless streaming at 83 Hz/channel (~INR 3,146).
+              </p>
+
+              <div class="pub-tags-row">
+                <span class="pub-tag">AD620</span>
+                <span class="pub-tag">TL072</span>
+                <span class="pub-tag">ADS1115</span>
+                <span class="pub-tag">ESP32</span>
+                <span class="pub-tag">Python</span>
+                <span class="pub-tag">NumPy</span>
+                <span class="pub-tag">SciPy</span>
+                <span class="pub-tag tag-highlight">BCI Hardware</span>
+              </div>
+
+              <div class="pub-card-actions">
+                <button class="btn-action btn-blue view-details-btn" onclick="toggleProject('research-2')">View Details
+                  <span class="arrow-icon">↓</span></button>
+              </div>
+            </div>
+
+            <!-- Expandable Research Highlights -->
+            <div class="project-expanded-content">
+              <div class="project-expanded-inner">
+                <div class="pub-highlights-block" style="margin-bottom: 0;">
+                  <div class="highlights-heading">Research Highlights & Findings:</div>
+                  <ul class="pub-highlights-list">
+                    <li>Engineered differential amplification circuit and active DRL feedback loop for microvolt-level
+                      bio-signal stabilization.</li>
+                    <li>Configured ESP32 microcontroller for multi-channel wireless EEG streaming at 83 Hz per channel.
+                    </li>
+                    <li>Demonstrated real-time BCI Pong game control with physiologically valid 15–80 μV EEG signals at
+                      an ultra-low hardware cost (~INR 3,146).</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -621,101 +707,133 @@
 
           <!-- Color Cards Grid -->
           <div class="color-cards-grid">
-            <!-- Card 1: AI & ML -->
+            <!-- Card 1: Programming Languages -->
             <div class="color-glass-card card-soft-white">
               <div class="card-header">
-                <span class="color-title">AI & Machine Learning</span>
+                <span class="color-title">Programming Languages</span>
                 <span class="close-icon">×</span>
               </div>
-              <p class="color-purpose">
-                Supervised Learning, Feature Engineering, Data Preprocessing, Model Evaluation, Explainable AI (SHAP),
-                LightGBM, Scikit-learn, NumPy, Pandas.
-              </p>
+              <div class="skills-pills-row">
+                <span class="skill-pill">Java</span>
+                <span class="skill-pill">Python</span>
+                <span class="skill-pill">TypeScript</span>
+                <span class="skill-pill">JavaScript</span>
+                <span class="skill-pill">SQL</span>
+              </div>
               <div class="color-specs">
                 <div class="spec-row">
                   <span class="spec-label">DOMAIN</span>
-                  <span class="spec-value">Machine Learning</span>
-
-                </div>
-                <div class="spec-row">
-                  <span class="spec-label">TECH</span>
-                  <span class="spec-value">Python / Scikit-learn</span>
-
+                  <span class="spec-value">Core Languages</span>
                 </div>
               </div>
             </div>
 
-            <!-- Card 3: Frontend & Web -->
+            <!-- Card 2: Machine Learning & AI -->
             <div class="color-glass-card card-deep-bg">
               <div class="card-header">
-                <span class="color-title">Frontend & Web</span>
+                <span class="color-title">Machine Learning & AI</span>
                 <span class="close-icon">×</span>
               </div>
-              <p class="color-purpose">
-                React.js, Next.js, JavaScript, Tailwind CSS, REST APIs, Reusable UI Components, Responsive Design &
-                Usability Optimization.
-              </p>
+              <div class="skills-pills-row">
+                <span class="skill-pill">Supervised Learning</span>
+                <span class="skill-pill">Feature Engineering</span>
+                <span class="skill-pill">Data Preprocessing</span>
+                <span class="skill-pill">Model Evaluation</span>
+                <span class="skill-pill">Explainable AI (SHAP)</span>
+                <span class="skill-pill">Scikit-learn</span>
+                <span class="skill-pill">NumPy</span>
+                <span class="skill-pill">Pandas</span>
+              </div>
               <div class="color-specs">
                 <div class="spec-row">
                   <span class="spec-label">DOMAIN</span>
-                  <span class="spec-value">Frontend Engineering</span>
-
-                </div>
-                <div class="spec-row">
-                  <span class="spec-label">TECH</span>
-                  <span class="spec-value">React / Next.js / JS</span>
-
+                  <span class="spec-value">Artificial Intelligence</span>
                 </div>
               </div>
             </div>
-            <!-- Card 4: Backend & Core CS -->
+
+            <!-- Card 3: Web & Backend Development -->
             <div class="color-glass-card card-electric-accent">
               <div class="card-header">
-                <span class="color-title">Backend, DB & Core CS</span>
+                <span class="color-title">Web & Backend Development</span>
                 <span class="close-icon">×</span>
               </div>
-              <p class="color-purpose">
-                Node.js, Express.js, Django, MongoDB, PostgreSQL, SQL, Git, GitHub, VS Code, Data Structures &
-                Algorithms, OS, DBMS, Networks.
-              </p>
+              <div class="skills-pills-row">
+                <span class="skill-pill">Next.js</span>
+                <span class="skill-pill">React.js</span>
+                <span class="skill-pill">Node.js</span>
+                <span class="skill-pill">Express.js</span>
+                <span class="skill-pill">Tailwind CSS</span>
+                <span class="skill-pill">REST APIs</span>
+              </div>
               <div class="color-specs">
                 <div class="spec-row">
                   <span class="spec-label">DOMAIN</span>
-                  <span class="spec-value">Backend & CS Core</span>
-
-                </div>
-                <div class="spec-row">
-                  <span class="spec-label">TECH</span>
-                  <span class="spec-value">Node / Django / SQL</span>
-
+                  <span class="spec-value">Full-Stack Development</span>
                 </div>
               </div>
             </div>
 
-            <!-- Card 2: EEG & BCI -->
+            <!-- Card 4: Databases -->
             <div class="color-glass-card card-dark-accent">
               <div class="card-header">
-                <span class="color-title">EEG & BCI Hardware</span>
+                <span class="color-title">Databases</span>
                 <span class="close-icon">×</span>
               </div>
-              <p class="color-purpose">
-                3-Channel EEG Acquisition, Signal Filtering, AD620, TL072, ADS1115, ESP32, Noise Suppression, Biomarker
-                Extraction & Pong Control.
-              </p>
+              <div class="skills-pills-row">
+                <span class="skill-pill">MongoDB</span>
+                <span class="skill-pill">MySQL</span>
+              </div>
               <div class="color-specs">
                 <div class="spec-row">
                   <span class="spec-label">DOMAIN</span>
-                  <span class="spec-value">Neurotechnology</span>
-
-                </div>
-                <div class="spec-row">
-                  <span class="spec-label">TECH</span>
-                  <span class="spec-value">ESP32 / Python BCI</span>
-
+                  <span class="spec-value">Database Engineering</span>
                 </div>
               </div>
             </div>
 
+            <!-- Card 5: Tools & Platforms -->
+            <div class="color-glass-card card-soft-white">
+              <div class="card-header">
+                <span class="color-title">Tools & Platforms</span>
+                <span class="close-icon">×</span>
+              </div>
+              <div class="skills-pills-row">
+                <span class="skill-pill">Git</span>
+                <span class="skill-pill">GitHub</span>
+                <span class="skill-pill">VS Code</span>
+                <span class="skill-pill">Postman</span>
+                <span class="skill-pill">Google Colab</span>
+                <span class="skill-pill">Overleaf</span>
+              </div>
+              <div class="color-specs">
+                <div class="spec-row">
+                  <span class="spec-label">DOMAIN</span>
+                  <span class="spec-value">Developer Tooling</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 6: Core Computer Science -->
+            <div class="color-glass-card card-deep-bg">
+              <div class="card-header">
+                <span class="color-title">Core Computer Science</span>
+                <span class="close-icon">×</span>
+              </div>
+              <div class="skills-pills-row">
+                <span class="skill-pill">Data Structures & Algorithms</span>
+                <span class="skill-pill">Object-Oriented Programming</span>
+                <span class="skill-pill">Database Management Systems</span>
+                <span class="skill-pill">Operating Systems</span>
+                <span class="skill-pill">Computer Networks</span>
+              </div>
+              <div class="color-specs">
+                <div class="spec-row">
+                  <span class="spec-label">DOMAIN</span>
+                  <span class="spec-value">CS Fundamentals</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -826,7 +944,7 @@
               <li><a href="#home">Home</a></li>
               <li><a href="#about">About Me</a></li>
               <li><a href="#projects">Projects</a></li>
-              <li><a href="#methodology">Methodology</a></li>
+              <li><a href="#research">Research & Publications</a></li>
               <li><a href="#skills">Technical Skills</a></li>
               <li><a href="#experience">Experience</a></li>
             </ul>
@@ -881,6 +999,15 @@
         </div>
       </div>
     </footer>
+  </div>
+
+  <!-- Image Preview Lightbox Modal -->
+  <div id="image-lightbox-modal" class="lightbox-overlay" onclick="closeImageLightbox(event)">
+    <div class="lightbox-container" onclick="event.stopPropagation()">
+      <button class="lightbox-close-btn" onclick="closeImageLightbox(event)" title="Close Preview">✕</button>
+      <img id="lightbox-img" src="" alt="Project Cover Preview" class="lightbox-image" />
+      <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
   </div>
 
   <script type="module" src="./main.js"></script>

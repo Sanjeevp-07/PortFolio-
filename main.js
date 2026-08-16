@@ -276,11 +276,44 @@ function toggleProject(projectId) {
     // Toggle the button text/icon
     const btn = card.querySelector('.view-details-btn');
     if (card.classList.contains('expanded')) {
-      btn.innerHTML = 'Hide Details <span class=" arrow-icon\>?</span>';
- } else {
- btn.innerHTML = 'View Details <span class=\arrow-icon\>?</span>';
- }
- }
+      btn.innerHTML = 'Hide Details <span class="arrow-icon">↑</span>';
+    } else {
+      btn.innerHTML = 'View Details <span class="arrow-icon">↓</span>';
+    }
+  }
 }
 
+// Image Lightbox Preview Functions
+function openImageLightbox(src, alt) {
+  const modal = document.getElementById('image-lightbox-modal');
+  const img = document.getElementById('lightbox-img');
+  const caption = document.getElementById('lightbox-caption');
+  if (modal && img) {
+    img.src = src;
+    img.alt = alt || 'Project Cover Preview';
+    if (caption) caption.textContent = alt || '';
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeImageLightbox(event) {
+  if (event && event.stopPropagation) {
+    event.stopPropagation();
+  }
+  const modal = document.getElementById('image-lightbox-modal');
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeImageLightbox();
+  }
+});
+
 window.toggleProject = toggleProject;
+window.openImageLightbox = openImageLightbox;
+window.closeImageLightbox = closeImageLightbox;
