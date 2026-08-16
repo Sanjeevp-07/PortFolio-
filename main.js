@@ -266,3 +266,21 @@ if (document.readyState === 'loading') {
 } else {
   init();
 }
+
+// Project Card Toggle Expansion
+function toggleProject(projectId) {
+  const card = document.getElementById(projectId);
+  if (card) {
+    card.classList.toggle('expanded');
+    
+    // Toggle the button text/icon
+    const btn = card.querySelector('.view-details-btn');
+    if (card.classList.contains('expanded')) {
+      btn.innerHTML = 'Hide Details <span class=" arrow-icon\>?</span>';
+ } else {
+ btn.innerHTML = 'View Details <span class=\arrow-icon\>?</span>';
+ }
+ }
+}
+
+window.toggleProject = toggleProject;

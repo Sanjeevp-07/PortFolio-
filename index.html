@@ -326,42 +326,176 @@
           </div>
         </div>
 
-        <!-- 3 Image Placeholders -->
-        <div class="image-placeholders-grid">
-          <div class="placeholder-card">
-            <div class="placeholder-media">
-              <div class="placeholder-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <rect x="3" y="3" width="18" height="18" rx="3"></rect>
-                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                  <polyline points="21 15 16 10 5 21"></polyline>
-                </svg>
+        <!-- Stacked Vertical Project Cards -->
+        <div class="projects-stack-container">
+          <!-- Project 1: INORA -->
+          <div class="project-v-card" id="project-1">
+            <div class="project-v-card-body">
+              <div class="project-v-info">
+                <h3 class="project-v-title">INORA — Multi-Channel EEG-Based Control</h3>
+                
+                <div class="project-v-meta">
+                  <div class="meta-row">
+                    <span class="meta-label">TIMELINE</span>
+                    <span class="meta-value">Dec 2025 – Jan 2026</span>
+                  </div>
+                  <div class="meta-row">
+                    <span class="meta-label">TECH</span>
+                    <span class="meta-value">AD620, TL072, ADS1115, ESP32, Python, NumPy</span>
+                  </div>
+                </div>
+
+                <ul class="project-bullet-list">
+                  <li>Built a low-cost 3-channel EEG acquisition system with wireless streaming at 83 Hz/channel, and developed a Python pipeline for EEG acquisition, filtering, and DRL-based noise reduction, validated on 20 volunteers.</li>
+                  <li>Demonstrated EEG-based Pong control with valid 15–80 µV signals using hardware costing INR 3,146.</li>
+                </ul>
+
+                <div class="project-v-divider"></div>
+
+                <div class="project-v-actions">
+                  <button class="btn-action btn-blue view-details-btn" onclick="toggleProject('project-1')">View Details <span class="arrow-icon">↓</span></button>
+                </div>
               </div>
-              <span class="placeholder-label">INORA: Low-Cost EEG BCI (Pong Control)</span>
+
+              <!-- Right 30% Cover Image Placeholder -->
+              <div class="project-cover-placeholder">
+                <div class="placeholder-content">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="3" y="3" width="18" height="18" rx="3"></rect>
+                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                    <polyline points="21 15 16 10 5 21"></polyline>
+                  </svg>
+                  <span>Project Cover Image</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Expandable Content -->
+            <div class="project-expanded-content">
+              <div class="project-expanded-inner">
+                <div class="project-extended-desc">
+                  <h4>HARDWARE & SIGNAL PROCESSING HIGHLIGHTS</h4>
+                  <ul class="project-bullet-list">
+                    <li>Custom hardware stack incorporating AD620 instrumentation amplifier, TL072 active filtering stage, ADS1115 16-bit ADC, and ESP32 wireless telemetry.</li>
+                    <li>Python acquisition pipeline featuring real-time FFT feature extraction, bandpass filtering, and Deep Reinforcement Learning (DRL) noise reduction.</li>
+                    <li>Clinical & performance validation on 20 test subjects, maintaining reliable signal fidelity (15–80 µV) for real-time Pong gameplay control.</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="placeholder-card">
-            <div class="placeholder-media">
-              <div class="placeholder-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <rect x="3" y="3" width="18" height="18" rx="3"></rect>
-                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                  <polyline points="21 15 16 10 5 21"></polyline>
-                </svg>
+
+          <!-- Project 2: BrainScore -->
+          <div class="project-v-card" id="project-2">
+            <div class="project-v-card-body">
+              <div class="project-v-info">
+                <h3 class="project-v-title">BrainScore — EEG-Based Depression Detection</h3>
+                
+                <div class="project-v-meta">
+                  <div class="meta-row">
+                    <span class="meta-label">TIMELINE</span>
+                    <span class="meta-value">Mar 2025 – Nov 2025</span>
+                  </div>
+                  <div class="meta-row">
+                    <span class="meta-label">TECH</span>
+                    <span class="meta-value">Python, Pandas, Scikit-learn, LightGBM, SHAP, Google Colab</span>
+                  </div>
+                </div>
+
+                <ul class="project-bullet-list">
+                  <li>Processed EEG recordings from 58 subjects using 20-channel signals and extracted 18 statistical, frequency, and entropy-based biomarkers; built and evaluated 6 machine learning models.</li>
+                  <li>Achieved 95.28% classification accuracy using LightGBM, with SHAP analysis to interpret feature importance and improve model explainability for automated depression detection.</li>
+                </ul>
+
+                <div class="project-v-divider"></div>
+
+                <div class="project-v-actions">
+                  <button class="btn-action btn-blue view-details-btn" onclick="toggleProject('project-2')">View Details <span class="arrow-icon">↓</span></button>
+                </div>
               </div>
-              <span class="placeholder-label">BrainScore: 95.28% Explainable EEG AI</span>
+
+              <!-- Right 30% Cover Image Placeholder -->
+              <div class="project-cover-placeholder">
+                <div class="placeholder-content">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="3" y="3" width="18" height="18" rx="3"></rect>
+                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                    <polyline points="21 15 16 10 5 21"></polyline>
+                  </svg>
+                  <span>Project Cover Image</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Expandable Content -->
+            <div class="project-expanded-content">
+              <div class="project-expanded-inner">
+                <div class="project-extended-desc">
+                  <h4>MODEL ARCHITECTURE & EXPLAINABILITY</h4>
+                  <ul class="project-bullet-list">
+                    <li>Engineered multi-channel signal processing pipeline across 20 EEG channels, extracting 18 high-impact statistical, time-domain, frequency-domain, and entropy-based biomarkers.</li>
+                    <li>Benchmarked 6 Machine Learning algorithms (including LightGBM, Random Forest, XGBoost, and SVM) on 58 subject datasets.</li>
+                    <li>Leveraged SHAP (SHapley Additive exPlanations) for quantitative feature attribution, establishing clinical interpretability for automated depression diagnostics.</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="placeholder-card">
-            <div class="placeholder-media">
-              <div class="placeholder-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <rect x="3" y="3" width="18" height="18" rx="3"></rect>
-                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                  <polyline points="21 15 16 10 5 21"></polyline>
-                </svg>
+
+          <!-- Project 3: MUNC Dashboard -->
+          <div class="project-v-card" id="project-3">
+            <div class="project-v-card-body">
+              <div class="project-v-info">
+                <h3 class="project-v-title">MUNC Dashboard — Kasper Infotech User Dashboard</h3>
+                
+                <div class="project-v-meta">
+                  <div class="meta-row">
+                    <span class="meta-label">TIMELINE</span>
+                    <span class="meta-value">June 2025 – Aug 2025</span>
+                  </div>
+                  <div class="meta-row">
+                    <span class="meta-label">TECH</span>
+                    <span class="meta-value">JavaScript, Next.js, React.js</span>
+                  </div>
+                </div>
+
+                <ul class="project-bullet-list">
+                  <li>Developed and enhanced responsive dashboard pages using JavaScript, Next.js, and React.js, implementing frontend features and improving UI usability across multiple pages.</li>
+                  <li>Resolved application bugs and supported testing and documentation to improve reliability and maintainability.</li>
+                </ul>
+
+                <div class="project-v-divider"></div>
+
+                <div class="project-v-actions">
+                  <button class="btn-action btn-blue view-details-btn" onclick="toggleProject('project-3')">View Details <span class="arrow-icon">↓</span></button>
+                </div>
               </div>
-              <span class="placeholder-label">MUNC Dashboard: React & Next.js UI</span>
+
+              <!-- Right 30% Cover Image Placeholder -->
+              <div class="project-cover-placeholder">
+                <div class="placeholder-content">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="3" y="3" width="18" height="18" rx="3"></rect>
+                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                    <polyline points="21 15 16 10 5 21"></polyline>
+                  </svg>
+                  <span>Project Cover Image</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Expandable Content -->
+            <div class="project-expanded-content">
+              <div class="project-expanded-inner">
+                <div class="project-extended-desc">
+                  <h4>FRONTEND ARCHITECTURE & USABILITY ENHANCEMENTS</h4>
+                  <ul class="project-bullet-list">
+                    <li>Architected modular React/Next.js dashboard components for optimal render speed, responsive navigation, and intuitive user workflows.</li>
+                    <li>Streamlined UI usability across multi-page user account systems with responsive layouts and component state management.</li>
+                    <li>Conducted comprehensive frontend debugging, cross-browser compatibility testing, and technical documentation to ensure long-term code maintainability.</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
